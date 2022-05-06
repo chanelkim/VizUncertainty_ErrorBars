@@ -102,7 +102,7 @@ import * as d3 from 'd3';
           if(this.dataIsReady && this.sampleDataIsReady) this.render()
       },
       sampleDataIsReady: function() {
-          if(this.dataIsReady && this.sampleDataIsReady) this.render()
+          // if(this.dataIsReady && this.sampleDataIsReady) this.render()
       },
       checkboxSample: function() {
         if(this.checkboxSample) {
@@ -138,7 +138,7 @@ import * as d3 from 'd3';
     },
     methods: {
     render: function() {
-
+      console.log('hiii')
         let dataset = this.dataset;
 				let width = this.width;
 				let svgHeight = this.svgHeight;
