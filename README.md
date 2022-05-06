@@ -3,7 +3,7 @@
 ## Group Final Project
 ### Assignment details
 Type of Uncertainty: Measurement Error, the new error bar
-<br />Dataset: Aggregated polling data from FiveThirtyEight's ["How popular/unpopular is Joe Biden?"](https://projects.fivethirtyeight.com/biden-approval-rating/).
+<br />Dataset: Aggregated polling data from FiveThirtyEight's ["How popular/unpopular is Joe Biden?"](https://projects.fivethirtyeight.com/biden-approval-rating/)
 <br />Team: Starlett Hartley, Yoana Kosturska, Zane Yuan Zhang, Chanel Kim
 <br />Instructors: Aaron Hill & Dr. Michael Schober
 
