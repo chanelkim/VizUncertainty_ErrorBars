@@ -3,9 +3,9 @@
 ## Group Final Project
 ### Assignment details
 Type of Uncertainty: Measurement Error, the new error bar
-Dataset: Aggregated polling data from FiveThirtyEight's [How popular/unpopular is Joe Biden?](https://projects.fivethirtyeight.com/biden-approval-rating/).
-Team: Starlett Hartley, Yoana Kosturska, Zane Yuan Zhang, Chanel Kim
-Instructors: Aaron Hill & Dr. Michael Schober
+<br />Dataset: Aggregated polling data from FiveThirtyEight's ["How popular/unpopular is Joe Biden?"](https://projects.fivethirtyeight.com/biden-approval-rating/).
+<br />Team: Starlett Hartley, Yoana Kosturska, Zane Yuan Zhang, Chanel Kim
+<br />Instructors: Aaron Hill & Dr. Michael Schober
 
 ### Prototype
 Original code forked from [ykmsdv.github.io](https://github.com/ykmsdv/ykmsdv.github.io/tree/master/source_code_error_bars). 
