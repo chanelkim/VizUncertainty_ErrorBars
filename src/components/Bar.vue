@@ -36,10 +36,20 @@
 
         <v-checkbox
             v-if="checkbox"
-            class="mt-12"
+            class="mt-12 mr-6"
             dark
               v-model="checkboxSample"
               label="Size Polls by Number of Participants"
+              color="white"
+              :value="true"
+              hide-details
+      ></v-checkbox>
+      <v-checkbox
+            v-if="checkbox"
+            class="mt-12"
+            dark
+              v-model="showTrend"
+              label="Show Trend Line"
               color="white"
               :value="true"
               hide-details
@@ -91,6 +101,7 @@ import * as d3 from 'd3';
 			svg: Object,
       checkbox: false,
       checkboxSample: true,
+      showTrend: false,
       positiveColor: '#00C9A7',
       negativeColor: '#FF8066'
 		}),    
@@ -111,6 +122,17 @@ import * as d3 from 'd3';
         } else {
           this.svg.selectAll('circle')
           .attr('r', 2)
+        }
+      },
+      showTrend: function() {
+        if(this.showTrend) {
+          this.svg.selectAll('path.trend')
+            .transition()
+            .attr('opacity', .5)
+        } else {
+          this.svg.selectAll('path.trend')
+            .transition()
+            .attr('opacity', 0)
         }
       },
       checkbox: function() {
@@ -138,7 +160,6 @@ import * as d3 from 'd3';
     },
     methods: {
     render: function() {
-      console.log('hiii')
         let dataset = this.dataset;
 				let width = this.width;
 				let svgHeight = this.svgHeight;
@@ -202,7 +223,19 @@ import * as d3 from 'd3';
               .attr('opacity', 0)
             });                
       });
-                  
+
+      // console.log('hiii', dataset.map(d => [this.xScale(d['month_name']), this.yScale(d['mean'])]))
+
+        this.svg.append('path')
+          .attr('class', 'trend')
+          .style('stroke', 'white')
+          .style('stroke-width', '2px')
+          .attr('d', d3.line().curve(d3.curveBasis)(dataset.map(d => [this.xScale(d['month_name']) + this.xScale.bandwidth() / 2, this.yScale(d['mean']) + 2.5])))
+          .attr('fill', 'none')
+          .attr('opacity', 0)
+          .attr('stroke-linejoin', 'round')
+          .attr('stroke-linecap', 'round')
+
         this.svg.append('g')
           .attr("class", 'text')
           .selectAll("text")
