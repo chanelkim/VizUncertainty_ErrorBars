@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar color="gray-darken-2" dark app >
-      <v-toolbar-title>Visualizing Uncertainty - The New Error Bar</v-toolbar-title>
+      <v-toolbar-title>Visualizing Uncertainty - The New Error Bar - Spring 2022</v-toolbar-title>
     </v-app-bar>
     <v-main style="background: #222">
         <v-tabs
