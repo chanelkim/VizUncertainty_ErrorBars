@@ -113,7 +113,7 @@ import * as d3 from 'd3';
           if(this.dataIsReady && this.sampleDataIsReady) this.render()
       },
       sampleDataIsReady: function() {
-          // if(this.dataIsReady && this.sampleDataIsReady) this.render()
+          if(this.dataIsReady && this.sampleDataIsReady) this.render()
       },
       checkboxSample: function() {
         if(this.checkboxSample) {
