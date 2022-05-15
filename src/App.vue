@@ -8,7 +8,7 @@
     </v-app-bar>
     <v-main style="background: #222">
       <v-tabs v-model="tab" background-color="grey darken-2" color="basil" grow>
-        <v-tab href="#tab-proposal">Proposal</v-tab>
+        <v-tab href="#tab-proposal">Project Introduction</v-tab>
         <v-tab href="#tab-data">Data</v-tab>
         <v-tab href="#tab-viz">Visualization</v-tab>
       </v-tabs>
@@ -16,10 +16,11 @@
         <v-tab-item value="tab-proposal">
           <v-container>
             <v-card class="mt-6">
-              <v-card-title class="text-center font-weight-thin mb-0 pb-0">
-                Proposal Sketch
-              </v-card-title>
-              <v-img class="mt-6" src="error-bar-prototype.png"></v-img>
+              <!-- <v-card-title class="text-center font-weight-thin mb-0 pb-0"> -->
+                <!-- Proposal Sketch -->
+              <!-- </v-card-title> -->
+              <!-- <v-img class="mt-6" src="error-bar-prototype.png"></v-img> -->
+              <v-img class="mt-6" src="introduction.png"></v-img>
             </v-card>
           </v-container>
         </v-tab-item>
