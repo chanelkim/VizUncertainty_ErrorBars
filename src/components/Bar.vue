@@ -59,10 +59,14 @@
     </v-card>
     <v-card class="elevation-0" color="#222">
       <v-row class="mb-12 ml-8">
-        <div style="height: 80px; width: 400px;">
-        <v-img
-          src="legend.png"
-        ></v-img>
+        <div class="d-flex" style="height: 80px;">
+          <v-img
+            src="legend1.png"
+          ></v-img>
+          <v-img
+            v-if="checkbox"
+            src="legend2.png"
+          ></v-img>
         </div>
       </v-row>
     </v-card>
@@ -96,7 +100,7 @@ import * as d3 from 'd3';
     },
 		data: () => ({
 			width: 760,
-      height: 530,
+      height: 430,
 			margin: {top: 10, right: 40, bottom: 40, left: 50},
 			svg: Object,
       checkbox: false,
