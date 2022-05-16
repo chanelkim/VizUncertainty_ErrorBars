@@ -1,13 +1,15 @@
 <template>
   <v-app>
-    <v-app-bar color="gray-darken-2" dark app>
-      <v-toolbar-title class="subtitle-1" style="color: #999">
-        Visualizing Uncertainty - The New Error Bar - Spring
-        2022</v-toolbar-title
-      >
+
+    <v-app-bar color="#222" dark app>
+      <v-toolbar-title class="Alfa Slab One" style="color: #ddd">
+        Measurement Error: The New Error Bar</v-toolbar-title>
+      <v-toolbar-title class="body-2 mt-2 pl-5" style="color: #777">
+        Visualizing Uncertainty, Spring 2022</v-toolbar-title>
     </v-app-bar>
-    <v-main style="background: #222">
-      <v-tabs v-model="tab" background-color="grey darken-2" color="grey lighten-1" grow>
+
+    <v-main style="background: #111">
+      <v-tabs v-model="tab" background-color="grey darken-1" color="grey lighten-3" grow>
         <v-tab class="Alfa Slab One" href="#tab-proposal">Project Introduction</v-tab>
         <v-tab href="#tab-data">Data</v-tab>
         <v-tab href="#tab-viz">Visualization</v-tab>
@@ -15,7 +17,7 @@
       <v-tabs-items v-model="tab" style="background: #222">
         <v-tab-item value="tab-proposal">
           <v-container>
-            <v-card class="mt-6">
+            <v-card class="mt-6" color="#222">
               <!-- <v-card-title class="text-center font-weight-thin mb-0 pb-0"> -->
                 <!-- Proposal Sketch -->
               <!-- </v-card-title> -->
@@ -26,11 +28,11 @@
         </v-tab-item>
         <v-tab-item value="tab-data">
           <v-container>
-            <v-card class="mt-6">
-              <v-card-title class="text-center font-weight-bold mb-0 pb-0">
-                Sort through the original dataset:
+            <v-card class="mt-6" color="#222">
+              <v-card-title class="text-center overline mb-0 pb-0 font-weight-light" style="color: #ddd">
+                Sort through the fivethirtyeight dataset
               </v-card-title>
-              <v-data-table
+              <v-data-table dense dark
                 :headers="headers"
                 :items="polls"
                 :items-per-page="50"
@@ -50,6 +52,7 @@
         </v-tab-item>
       </v-tabs-items>
     </v-main>
+
   </v-app>
 </template>
 

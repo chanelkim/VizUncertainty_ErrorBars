@@ -16,16 +16,16 @@
   <v-container>
 
     <v-card class="mt-5"  color="#222">
-      <v-card-subtitle class="display-1 text-center mb-0 pb-0" style="color: #fff">
-        Approval Ratings of President Biden for 2021 (in %)
+      <v-card-subtitle class="display-1 text-center mb-0 pb-0 font-weight-bold" style="color: #fff">
+        Approval Ratings for President Biden in 2021 (in %)
       </v-card-subtitle>
-      <h5 class="text-subtitle-2 text-center mt-0 pt-1" style="color: #999">
-        Minimum, Maximum, and Average of Monthly Polling Data
+      <h5 class="text-subtitle-2 text-center mt-2 pt-1 font-weight-medium" style="color: #999">
+        Minimums, Maximums, and Averages of Monthly Polling Data
       </h5>      
 
-      <v-row align="center" justify="center">
+      <v-row align="center" justify="center" class="caption">
         <v-checkbox
-            class="mt-12 mr-6"
+            class="mt-9 mr-6 font-weight-light"
             dark
               v-model="checkbox"
               label="Show All Polls"
@@ -36,7 +36,7 @@
 
         <v-checkbox
             v-if="checkbox"
-            class="mt-12 mr-6"
+            class="mt-9 mr-6 font-weight-light"
             dark
               v-model="checkboxSample"
               label="Size Polls by Number of Participants"
@@ -44,9 +44,10 @@
               :value="true"
               hide-details
       ></v-checkbox>
+      
       <v-checkbox
             v-if="checkbox"
-            class="mt-12"
+            class="mt-9 mr-6 font-weight-light"
             dark
               v-model="showTrend"
               label="Show Trend Line"
@@ -131,11 +132,11 @@ import * as d3 from 'd3';
       showTrend: function() {
         if(this.showTrend) {
           this.svg.selectAll('path.trend')
-            .transition()
+            .transition('400')
             .attr('opacity', .5)
         } else {
           this.svg.selectAll('path.trend')
-            .transition()
+            .transition('400')
             .attr('opacity', 0)
         }
       },
@@ -217,13 +218,13 @@ import * as d3 from 'd3';
             .on("mouseover", (e, d) => { //new
               console.log (d)
               d3.select('#' + d.month_name + m)
-              .transition()
+              .transition('100')
               .attr('opacity', 1)
             })
             .on("mouseleave", (e, d) => { //new
               console.log (d)
               d3.select('#' + d.month_name + m)
-              .transition()
+              .transition('100')
               .attr('opacity', 0)
             });                
       });
@@ -232,7 +233,7 @@ import * as d3 from 'd3';
 
         this.svg.append('path')
           .attr('class', 'trend')
-          .style('stroke', 'white')
+          .style('stroke', '#ddd')
           .style('stroke-width', '2px')
           .attr('d', d3.line().curve(d3.curveBasis)(dataset.map(d => [this.xScale(d['month_name']) + this.xScale.bandwidth() / 2, this.yScale(d['mean']) + 2.5])))
           .attr('fill', 'none')
@@ -248,11 +249,11 @@ import * as d3 from 'd3';
           .append("text")
           .attr('id', d => d['month_name'] + 'max') //new
           .attr('x', d => this.xScale(d['month_name']))
-          .attr('y', d => this.yScale(d['max'] + 0.7))
+          .attr('y', d => this.yScale(d['max'] + 0.8))
           .attr('dx', d => -3)
           .text(d => `max: ${d.max}`)           
           .style('font-size', '8pt')
-          .attr('fill', '#999')
+          .attr('fill', 'white')
           .attr("opacity", 0) //new
 
         this.svg.append('g')
@@ -263,11 +264,11 @@ import * as d3 from 'd3';
           .append("text")
           .attr('id', d => d['month_name'] + 'min') //new
           .attr('x', d => this.xScale(d['month_name']))
-          .attr('y', d => this.yScale(d['min'] - 1.5))
+          .attr('y', d => this.yScale(d['min'] + 0.8))
           .attr('dx', d => -2)
           .text(d => `min: ${d.min}`) 
           .style('font-size', '8pt')
-          .attr('fill', '#999')
+          .attr('fill', 'white')
           .attr("opacity", 0) //new
 
 
@@ -279,11 +280,11 @@ import * as d3 from 'd3';
           .append("text")
           .attr('id', d => d['month_name'] + 'mean') //new
           .attr('x', d => this.xScale(d['month_name']))
-          .attr('y', d => this.yScale(d['mean'] - 1.5))
+          .attr('y', d => this.yScale(d['mean'] + 0.8))
           .attr('dx', d => -5)
           .text(d => `mean: ${parseInt(d.mean)}`) 
           .style('font-size', '8pt')
-          .attr('fill', '#999')
+          .attr('fill', 'white')
           .attr("opacity", 0) //new
 
         this.svg
