@@ -15,7 +15,7 @@
 <template>
   <v-container>
 
-    <v-card class="mt-5"  color="#222">
+    <v-card class="mt-2"  color="#222">
       <v-card-subtitle class="display-1 text-center mb-0 pb-0 font-weight-bold" style="color: #fff">
         Approval Ratings for President Biden in 2021 (in %)
       </v-card-subtitle>
@@ -25,7 +25,7 @@
 
       <v-row align="center" justify="center" class="caption">
         <v-checkbox
-            class="mt-9 mr-6 font-weight-light"
+            class="mt-7 mb-2 mr-6 font-weight-light"
             dark
               v-model="checkbox"
               label="Show All Polls"
@@ -36,7 +36,7 @@
 
         <v-checkbox
             v-if="checkbox"
-            class="mt-9 mr-6 font-weight-light"
+            class="mt-7 mb-2 mr-6 font-weight-light"
             dark
               v-model="checkboxSample"
               label="Size Polls by Number of Participants"
@@ -47,7 +47,7 @@
       
       <v-checkbox
             v-if="checkbox"
-            class="mt-9 mr-6 font-weight-light"
+            class="mt-7 mb-2 mr-6 font-weight-light"
             dark
               v-model="showTrend"
               label="Show Trend Line"
@@ -101,7 +101,7 @@ import * as d3 from 'd3';
     },
 		data: () => ({
 			width: 760,
-      height: 430,
+      height: 400,
 			margin: {top: 10, right: 40, bottom: 40, left: 50},
 			svg: Object,
       checkbox: false,

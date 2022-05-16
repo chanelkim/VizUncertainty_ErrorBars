@@ -22,7 +22,7 @@
                 <!-- Proposal Sketch -->
               <!-- </v-card-title> -->
               <!-- <v-img class="mt-6" src="error-bar-prototype.png"></v-img> -->
-              <v-img class="mt-6" src="introduction.png"></v-img>
+              <v-img class="mt-6" src="introduction1.png"></v-img>
             </v-card>
           </v-container>
         </v-tab-item>
