@@ -1,14 +1,14 @@
 <template>
   <v-app>
     <v-app-bar color="gray-darken-2" dark app>
-      <v-toolbar-title
-        >Visualizing Uncertainty - The New Error Bar - Spring
+      <v-toolbar-title class="subtitle-1" style="color: #999">
+        Visualizing Uncertainty - The New Error Bar - Spring
         2022</v-toolbar-title
       >
     </v-app-bar>
     <v-main style="background: #222">
-      <v-tabs v-model="tab" background-color="grey darken-2" color="basil" grow>
-        <v-tab href="#tab-proposal">Project Introduction</v-tab>
+      <v-tabs v-model="tab" background-color="grey darken-2" color="grey lighten-1" grow>
+        <v-tab class="Alfa Slab One" href="#tab-proposal">Project Introduction</v-tab>
         <v-tab href="#tab-data">Data</v-tab>
         <v-tab href="#tab-viz">Visualization</v-tab>
       </v-tabs>
@@ -84,3 +84,7 @@ export default {
   }
 };
 </script>
+
+ <style scoped>
+@import './assets/main.css'
+</style>

@@ -16,10 +16,10 @@
   <v-container>
 
     <v-card class="mt-5"  color="#222">
-      <v-card-subtitle class="headline text-center mb-0 pb-0" style="color: #fff">
+      <v-card-subtitle class="display-1 text-center mb-0 pb-0" style="color: #fff">
         Approval Ratings of President Biden for 2021 (in %)
       </v-card-subtitle>
-      <h5 class="text-subtitle-2 text-center mt-0 pt-0" style="color: #999">
+      <h5 class="text-subtitle-2 text-center mt-0 pt-1" style="color: #999">
         Minimum, Maximum, and Average of Monthly Polling Data
       </h5>      
 
